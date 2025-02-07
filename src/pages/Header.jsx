@@ -1,3 +1,7 @@
 export default function Header() {
-  return <h1> questo è l'header</h1>;
+  return (
+    <div>
+      <div>QUI IL LOGO</div>
+    </div>
+  );
 }
