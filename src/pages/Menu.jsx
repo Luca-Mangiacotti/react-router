@@ -29,8 +29,12 @@ export default function Menu() {
             key={pizza.id}
             className="border-4 border-purple-600 border-double p-1.5 rounded-xl overflow-hidden"
           >
-            <h3>{pizza.name}</h3>
-            <img className="aspect-video" src={pizza.image} alt={pizza.name} />
+            <h3>&#127829; {pizza.name} &#x1F47D;</h3>
+            <img
+              className="aspect-video shadow-2xl"
+              src={pizza.image}
+              alt={pizza.name}
+            />
             <p>{pizza.ingredients}</p>
           </div>
         ))}
