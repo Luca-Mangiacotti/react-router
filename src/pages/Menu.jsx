@@ -21,13 +21,16 @@ export default function Menu() {
   useEffect(fetchPizzas, []);
 
   return (
-    <div>
-      <h3>menu delle pizze</h3>
-      <ul>
+    <div className="container max-w-5xl mx-auto p-8">
+      <h3 className="text-purple-600 ">menu delle pizze</h3>
+      <ul className="grid grid-cols-3 gap-4">
         {PizzasList.map((pizza) => (
-          <div key={pizza.id}>
+          <div
+            key={pizza.id}
+            className="border-4 border-purple-600 border-double p-1.5 rounded-xl overflow-hidden"
+          >
             <h3>{pizza.name}</h3>
-            <img src={pizza.image} alt={pizza.name} />
+            <img className="aspect-video" src={pizza.image} alt={pizza.name} />
             <p>{pizza.ingredients}</p>
           </div>
         ))}
