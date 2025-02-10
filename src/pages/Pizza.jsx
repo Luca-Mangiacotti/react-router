@@ -4,11 +4,13 @@ import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 //importiamo axios per gestire la chiamata al server
 import axios from "axios";
+
+import { Link } from "react-router-dom";
 //importiamo useNavigate per ottenere un reindirizzamento automatico ad un' azione
 import { Navigate } from "react-router-dom";
-
+//importiamo i componenti della pagina
 import PizzaCard from "./pages-components/PizzaCard";
-import { Link } from "react-router-dom";
+import BtnDefault from "./pages-components/BtnDefault";
 
 export default function Pizza() {
   //tramite destrutturazione andiamo a prendere l'id grazie all'hook useParams
@@ -40,11 +42,11 @@ export default function Pizza() {
   return (
     <div className="p-8 w-4xl mx-auto flex justify-between items-center gap-6">
       <Link to={`/menu/${prevID}`}>
-        <button>PRECEDENTE</button>
+        <BtnDefault>precedente</BtnDefault>
       </Link>
       <PizzaCard currentPizza={pizza} />
       <Link to={`/menu/${nextID}`}>
-        <button>PROSSIMO</button>
+        <BtnDefault>prossimo</BtnDefault>
       </Link>
     </div>
   );

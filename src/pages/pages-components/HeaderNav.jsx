@@ -1,24 +1,25 @@
 import { Link, NavLink } from "react-router-dom";
+import BtnHeadFoot from "./BtnHeadFoot";
 export default function HeaderNav() {
   return (
     <div className="flex justify-between p-2.5 gap-1.5">
       <NavLink
-        className="text-[#c9ae2a] border-4 border-[#c9ae2a] border-double p-1.5 rounded-xl"
+        className="border-4 border-[#c9ae2a] border-double rounded-full"
         to="/"
       >
-        Home Page
+        <BtnHeadFoot>HOME</BtnHeadFoot>
       </NavLink>
       <NavLink
-        className="text-[#c9ae2a] border-4 border-[#c9ae2a] border-double p-1.5 rounded-xl"
+        className="border-4 border-[#c9ae2a] border-double rounded-full"
         to="/menu"
       >
-        Menu
+        <BtnHeadFoot>MENU</BtnHeadFoot>
       </NavLink>
       <NavLink
-        className="text-[#c9ae2a] border-4 border-[#c9ae2a] border-double p-1.5 rounded-xl"
+        className="border-4 border-[#c9ae2a] border-double rounded-full"
         to="/about-us"
       >
-        Info
+        <BtnHeadFoot>INFO</BtnHeadFoot>
       </NavLink>
     </div>
   );

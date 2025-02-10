@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 //importiamo useParams per gestire la condizione sul bottone per la visualizzazione
 import { useParams } from "react-router-dom";
+
+import BtnDefault from "./BtnDefault";
 export default function PizzaCard({ currentPizza }) {
   const { id } = useParams();
 
@@ -11,7 +13,7 @@ export default function PizzaCard({ currentPizza }) {
     >
       <h3>&#127829; {currentPizza.name} &#x1F47D;</h3>
       <img
-        className="aspect-video shadow-2xl"
+        className="aspect-video shadow-2xl rounded-2xl"
         src={currentPizza.image}
         alt={currentPizza.name}
       />
@@ -24,11 +26,11 @@ export default function PizzaCard({ currentPizza }) {
       )}
       {id ? (
         <Link to={`/menu`}>
-          <button>torna al menu</button>
+          <BtnDefault>torna al menu</BtnDefault>
         </Link>
       ) : (
         <Link to={`/menu/${currentPizza.id}`}>
-          <button>visualizza pizza</button>
+          <BtnDefault>visualizza pizza</BtnDefault>
         </Link>
       )}
     </div>
