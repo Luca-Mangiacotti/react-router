@@ -27,7 +27,7 @@ export default function Menu() {
         {PizzasList.map((pizza) => (
           <div
             key={pizza.id}
-            className="border-4 border-purple-600 border-double p-1.5 rounded-xl overflow-hidden"
+            className="border-4 border-purple-600 border-double p-1.5 rounded-xl overflow-hidden h-full"
           >
             <h3>&#127829; {pizza.name} &#x1F47D;</h3>
             <img
@@ -35,7 +35,13 @@ export default function Menu() {
               src={pizza.image}
               alt={pizza.name}
             />
-            <p>{pizza.ingredients}</p>
+            {pizza.ingredients && (
+              <ul className="flex flex-wrap gap-1">
+                {pizza.ingredients.map((elm) => (
+                  <li key={elm}>{elm}</li>
+                ))}
+              </ul>
+            )}
           </div>
         ))}
       </ul>
