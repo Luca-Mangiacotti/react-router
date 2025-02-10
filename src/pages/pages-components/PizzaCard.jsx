@@ -1,4 +1,8 @@
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 export default function PizzaCard({ currentPizza }) {
+  const { id } = useParams();
+
   return (
     <div
       key={currentPizza.id}
@@ -16,6 +20,15 @@ export default function PizzaCard({ currentPizza }) {
             <li key={elm}>{elm}</li>
           ))}
         </ul>
+      )}
+      {id ? (
+        <Link to={`/menu`}>
+          <button>torna al menu</button>
+        </Link>
+      ) : (
+        <Link to={`/menu/${currentPizza.id}`}>
+          <button>visualizza pizza</button>
+        </Link>
       )}
     </div>
   );

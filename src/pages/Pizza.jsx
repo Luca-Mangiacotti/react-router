@@ -4,7 +4,9 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 //importiamo axios per gestire la chiamata al server
 import axios from "axios";
+
 import PizzaCard from "./pages-components/PizzaCard";
+import { Link } from "react-router-dom";
 
 export default function Pizza() {
   //tramite destrutturazione andiamo a prendere l'id grazie all'hook useParams
