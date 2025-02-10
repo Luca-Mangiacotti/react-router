@@ -17,7 +17,7 @@ export default function Menu() {
   const fetchPizzas = () => {
     axios.get("http://127.0.0.1:3001/pizzas").then(function (res) {
       setPizzasList(res.data);
-      console.log(res.data);
+      // console.log(res.data);
     });
   };
 

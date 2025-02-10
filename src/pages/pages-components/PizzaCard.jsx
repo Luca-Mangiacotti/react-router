@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+//importiamo useParams per gestire la condizione sul bottone per la visualizzazione
 import { useParams } from "react-router-dom";
 export default function PizzaCard({ currentPizza }) {
   const { id } = useParams();
