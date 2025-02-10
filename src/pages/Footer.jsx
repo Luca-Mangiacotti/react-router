@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container max-w-5xl mx-auto flex justify-between items-center">
         <Link
           className="border-4 border-[#c9ae2a] border-double rounded-full"
-          to="/about-us"
+          to="/login"
         >
           <BtnHeadFoot>LOGIN</BtnHeadFoot>
         </Link>
